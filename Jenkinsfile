@@ -27,7 +27,6 @@ pipeline {
 }
 
 }
-
                   }
             }
              stage('stop previous containers') {
@@ -39,12 +38,9 @@ pipeline {
             stage('Docker Run') {
               steps{
                    script {
-                sh 'docker run -d -p 8096:5000 --rm --name mypythonContainer 691708062387.dkr.ecr.us-east-1.amazonaws.com/test:latest'
-            
+                sh 'docker run -d -p 8096:5000 --rm --name mypythonContainer 691708062387.dkr.ecr.us-east-1.amazonaws.com/test:latest'     
       }
     }
         }
-           
-        
     }
   }
