@@ -11,9 +11,9 @@
 - to login ecr
 - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 691708062387.dkr.ecr.us-east-1.amazonaws.com
 4. Tag the version
-- docker tag test:latest 691708062387.dkr.ecr.us-east-1.amazonaws.com/test:latest
+- docker tag test:latest <AccID>.dkr.ecr.us-east-1.amazonaws.com/test:latest
 5. Upload
-docker push 691708062387.dkr.ecr.us-east-1.amazonaws.com/test:latest
+docker push <AccID>.dkr.ecr.us-east-1.amazonaws.com/test:latest
 
 jenkins pipeline - ecs
 requirements:
