@@ -1,36 +1,9 @@
-# jenkins-ECR
-# ecs
-
-- once docker file created
-1. Build Docker Image
-- docker build -t test .
-
-2. Run container /w image
-- docker run -d --publish 8888:5000 test
-
-- to login ecr
-- aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <Account_ID>.dkr.ecr.us-east-1.amazonaws.com
-4. Tag the version
-- docker tag test:latest <Account_ID>.dkr.ecr.us-east-1.amazonaws.com/test:latest
-5. Upload
-docker push <Acc0unt_ID>.dkr.ecr.us-east-1.amazonaws.com/test:latest
-
-jenkins pipeline - ecs
-requirements:
-ecs plugin
-manage nodes&clouds->configure clouds->add new cloud->amazon ec2 container service cloud
-
-
-
-## jenkins pipeline to create docker image and upload to AWS ECR
-
-
- 
-Jenkins pipeline will do
-automate builds
-automate docker image creation
-automate docker image upload into AWS ECR
-automate docker container provisioning
+## jenkins pipeline to create docker image and upload to AWS ECR 
+- Jenkins pipeline will do
+- automate builds
+- automate docker image creation
+- automate docker image upload into AWS ECR
+- automate docker container provisioning
 
 # Pre-requisites:
 - Jenkins is up and running
