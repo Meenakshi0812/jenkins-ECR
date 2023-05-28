@@ -9,7 +9,7 @@
 - docker run -d --publish 8888:5000 test
 
 - to login ecr
-- aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 691708062387.dkr.ecr.us-east-1.amazonaws.com
+- aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <Account_ID>.dkr.ecr.us-east-1.amazonaws.com
 4. Tag the version
 - docker tag test:latest <Account_ID>.dkr.ecr.us-east-1.amazonaws.com/test:latest
 5. Upload
