@@ -47,17 +47,17 @@ now, integrate jenkins with docker
 Now Login to Jenkins EC2 instance, execute below commands:
 
 #Add jenkins user to Docker group
-sudo usermod -a -G docker jenkins
+- sudo usermod -a -G docker jenkins
 
 #Restart Jenkins service
-sudo service jenkins restart
+- sudo service jenkins restart
 
 #Reload system daemon files
-sudo systemctl daemon-reload
+- sudo systemctl daemon-reload
 
 #Restart Docker service as well
 
-sudo service docker stop
-sudo service docker start
+- sudo service docker stop
+- sudo service docker start
 
-- Build the jenkinsfile.once build got success you can able to access it to using ip:8096.
+- Build the jenkinsfile.once build got success you can able to access it to using dns:8096.
